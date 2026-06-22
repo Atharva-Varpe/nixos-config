@@ -1,0 +1,36 @@
+[flavor]
+dark = auto
+
+[manager]
+show_hidden = false
+show_symlink = false
+sort_dir_first = true
+sort_reverse = false
+sort_by = "alphabetical"
+linemode = "size"
+
+[colors]
+bg = "{{colors.surface.default.hex}}"
+fg = "{{colors.on_surface.default.hex}}"
+cursor_bg = "{{colors.primary_container.default.hex}}"
+cursor_fg = "{{colors.on_primary_container.default.hex}}"
+cursor_border = "{{colors.primary.default.hex}}"
+selection_bg = "{{colors.secondary_container.default.hex}}"
+selection_fg = "{{colors.on_secondary_container.default.hex}}"
+tab_active = "{{colors.primary.default.hex}}"
+tab_inactive = "{{colors.surface_variant.default.hex}}"
+tab_active_border = "{{colors.primary.default.hex}}"
+tab_inactive_border = "{{colors.outline.default.hex}}"
+input_border = "{{colors.outline.default.hex}}"
+input_bg = "{{colors.surface_container_high.default.hex}}"
+input_fg = "{{colors.on_surface.default.hex}}"
+cmd_bg = "{{colors.surface_container.default.hex}}"
+cmd_fg = "{{colors.on_surface.default.hex}}"
+cmd_cursor_bg = "{{colors.primary.default.hex}}"
+cmd_cursor_fg = "{{colors.on_primary.default.hex}}"
+status_bg = "{{colors.surface_container.default.hex}}"
+status_fg = "{{colors.on_surface.default.hex}}"
+hovered_bg = "{{colors.surface_variant.default.hex}}"
+hovered_fg = "{{colors.on_surface.default.hex}}"
+selected_bg = "{{colors.secondary_container.default.hex}}"
+selected_fg = "{{colors.on_secondary_container.default.hex}}"

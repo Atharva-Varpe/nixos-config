@@ -1,0 +1,5 @@
+[config]
+
+[templates.yazi]
+input_path = "/home/luna/.config/matugen/templates/yazi.toml"
+output_path = "/home/luna/.config/yazi/theme.toml"
