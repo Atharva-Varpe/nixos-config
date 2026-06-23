@@ -9,11 +9,11 @@ NixOS 26.05 flake-based system and home-manager configuration for a developer wo
 | **OS** | NixOS 26.05 |
 | **Compositor** | Niri (scrollable tiling Wayland) + DankMaterialShell |
 | **Display Manager** | DMS Greeter |
-| **Shell** | Fish (primary), Bash |
+| **Shell** | Fish (primary) + Starship, Bash |
 | **Terminal** | Kitty (transparent, font size 13) |
 | **Editor** | Nixvim (Catppuccin/DMS theme, LSP for Nix/Rust/TypeScript) |
 | **Browser** | Zen Browser (uBlock Origin, Dark Reader, Bitwarden) |
-| **File Manager** | Yazi (Matugen-themed) + Dolphin |
+| **File Manager** | Yazi (Matugen-themed) + Nautilus |
 | **Audio** | PipeWire |
 | **Filesystem** | btrfs (root, home, nix subvolumes) |
 | **GPU** | Intel iGPU (display) + NVIDIA discrete (offload) |
@@ -21,7 +21,7 @@ NixOS 26.05 flake-based system and home-manager configuration for a developer wo
 ## Structure
 
 ```
-flake.nix                   Root flake (7 inputs, 2 outputs)
+flake.nix                   Root flake (8 inputs, 2 outputs)
 hosts/luna/                 NixOS system config
   config.nix                  Entry point
   config/
@@ -34,7 +34,6 @@ hosts/luna/                 NixOS system config
     locale.nix                en_IN, Asia/Kolkata
     nix.nix                   Flakes, unfree, overlays
     overlays.nix              Custom package overlays
-    packages.nix              System packages
     users.nix                 User luna
     printing.nix              CUPS
     state.nix                 stateVersion
@@ -78,6 +77,7 @@ home-manager switch --flake .#luna
 | dms | AvengeMedia/DankMaterialShell/stable |
 | niri | sodiboo/niri-flake |
 | nixvim | nix-community/nixvim/nixos-26.05 |
+| areofyl-fetch | github:areofyl/fetch |
 
 ## AI Agents
 
@@ -88,6 +88,3 @@ home-manager switch --flake .#luna
 | Gemini CLI | `gemini` | Google Gemini CLI |
 | OpenCode | `opencode` | OpenCode tool |
 
-## Known Issues
-
-See [BUG_NIRI_SESSION.md](BUG_NIRI_SESSION.md) — Niri session doesn't start from DMS greeter because the `niri.desktop` file isn't symlinked into wayland-sessions. NVIDIA RmInitAdapter failure is secondary (Intel iGPU works fine).

@@ -10,8 +10,8 @@
   programs.git = {
     enable = true;
     settings = {
-      user.name = "luna";
-      user.email = "luna@localhost";
+      user.name = "Atharva";
+      user.email = "atharva.varpe2019@gmail.com";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;

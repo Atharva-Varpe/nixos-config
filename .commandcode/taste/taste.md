@@ -17,3 +17,8 @@
 
 - Use JetBrainsMono Nerd Font as the default monospace font. Confidence: 0.50
 
+# nix
+
+- Use `nix-collect-garbage --delete-older-than 7d` for cleaning old Nix store paths. Confidence: 0.75
+- Keep only the last 10 system generations when cleaning old NixOS rebuilds. Confidence: 0.70
+
