@@ -62,7 +62,7 @@
     };
 
     homeConfigurations.luna = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system}.extend (overlay { inherit zen-browser system; });
+      pkgs = nixpkgs.legacyPackages.${system}.extend (overlay { inherit zen-browser system nixpkgs-unstable; });
       modules = [
         niri.homeModules.niri
         dms.homeModules.dank-material-shell
