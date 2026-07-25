@@ -40,6 +40,9 @@
       includes = {
         enable = true;
         override = false;
+        filesToInclude = [
+          "alttab" "binds" "colors" "cursor" "layout" "outputs" "windowrules" "wpblur" "blur"
+        ];
       };
     };
     enableVPN = false;
