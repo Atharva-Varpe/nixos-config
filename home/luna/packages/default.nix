@@ -9,5 +9,9 @@
     ./git.nix
     ./nix-dev.nix
     ./desktop.nix
+    ./shell.nix
+    ./terminal.nix
+    ./niri.nix
+    ./env.nix
   ];
 }
