@@ -12,12 +12,14 @@
     configHome = "/home/luna";
   };
 
+  programs.dconf.enable = true;
+
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gnome pkgs.xdg-desktop-portal-gtk ];
     config.niri = {
       default = [ "gtk" ];
-      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+      "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ];
       "org.freedesktop.impl.portal.AppChooser" = [ "gtk" ];
       "org.freedesktop.impl.portal.Screenshot" = [ "gtk" ];
     };
@@ -29,5 +31,6 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    GTK_USE_PORTAL = "1";
   };
 }
